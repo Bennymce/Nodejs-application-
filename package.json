@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bennymce/project-Directory.git"
+    "url": "https://github.com/Bennymce/Nodejs-application.git"
   },
   "author": "bennymc",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Bennymce/project-Directory/issues"
+    "url": "https://github.com/Bennymce/Nodejs-application/issues"
   },
-  "homepage": "https://github.com/Bennymce/project-Directory#readme"
+  "homepage": "https://github.com/Bennymce/Nodejs-application#readme"
 }
