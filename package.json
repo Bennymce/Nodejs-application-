@@ -1,0 +1,23 @@
+{
+  "name": "project-directory",
+  "version": "1.0.0",
+  "description": "project-benny",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bennymce/project-Directory.git"
+  },
+  "author": "bennymc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bennymce/project-Directory/issues"
+  },
+  "homepage": "https://github.com/Bennymce/project-Directory#readme"
+}
