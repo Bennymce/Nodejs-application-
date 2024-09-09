@@ -1,0 +1,35 @@
+apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    name: app-ingress
+    namespace: ingress-nginx
+  spec:
+    ingressClassName: nginx
+    rules:
+      - host: www.bosslady.sbs
+        http:
+          paths:
+            - pathType: Prefix
+              backend:
+                service:
+                  name: bosslady-service
+                  port:
+                    number: 80
+              path: /
+    # This section is only required if TLS is to be enabled for the Ingress
+    tls:
+      - hosts:
+        - www.bosslady.sbs
+        secretName: bosslady-tls
+
+If TLS is enabled for the Ingress, a Secret containing the certificate and key must also be provided:
+
+  apiVersion: v1
+  kind: Secret
+  metadata:
+    name: bosslady-tls
+    namespace: ingress-nginx
+  data:
+    tls.crt: <base64 encoded cert>
+    tls.key: <base64 encoded key>
+  type: kubernetes.io/tls
