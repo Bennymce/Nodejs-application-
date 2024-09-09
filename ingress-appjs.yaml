@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: app-ingress
+  namespace: ingress-nginx
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: www.bosslady.sbs
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: bosslady-service
+                port:
+                  number: 80
